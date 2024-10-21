@@ -6,9 +6,7 @@ const port = 3000;
 // Маршрут для динамического приветствия
 app.get('/hello', (req, res) => {
   const name = req.query.name || 'World';  // Получаем параметр name из запроса, по умолчанию "World"
-  res.send(`Hello there, ${name}!`);  // Возвращаем сообщение с именем
-});
-
+res.send(`Greetings, ${name}!`);
 // Запускаем сервер на порту 3000
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
